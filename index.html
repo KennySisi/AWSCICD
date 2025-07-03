@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Kenny</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+    caption {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    td {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Welcome Message</caption>
+    <tr>
+      <td id="message"></td>
+    </tr>
+  </table>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const timeStr = now.toLocaleString();
+      document.getElementById('message').innerHTML = `Hello, Kenny, the time is <strong>${timeStr}</strong>`;
+    }
+
+    updateTime(); // Call once immediately
+    setInterval(updateTime, 1000); // Update every second
+  </script>
+
+</body>
+</html>
